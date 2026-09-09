@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<header>   
+    <style>
+    .accordion {
+    background-color: maroon;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    width: 100%; 
+    }
+
+    .active, .accordion:hover {
+    background-color: #ccc;
+    }
+    
+    .accordion:after {
+    content: '+'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+    align-items: center;
+    }
+
+    .active:after {
+    content: "-"; /* Unicode character for "minus" sign (-) */
+    }
+
+    .panel {
+    padding: 0 18px;
+    background-color: white;
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .project-layout {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .project-image {
+        flex: 0 1 500px;
+    }
+
+    .experiment-image {
+        margin: 16px auto 0;
+    }
+
+    .accordion-group {
+        flex: 1;
+    }
+
+    @media (max-width: 800px) {
+        .project-layout {
+            flex-direction: column;
+        }
+    }
+
+    </style>
+</header>
+
+
+
+<body style="font-family:'Times New Roman', Times, serif">
+    
+    <h1 style="color:maroon; font-family:'Times New Roman', Times, serif">
+        Howdy!
+    </h1>
+    <p1>
+    My name is Alan Alvarado and I am a MechE student at Texas A&M University. <br>
+    Here are some of my engineering projects I have found to be the most impactful and fun in my career so far.<br>
+    Feel free to <a href="mailto:alanalvarado@tamu.edu">reach out</a> if you have any questions or suggestions!<br>
+    <br>
+    Thanks and gig 'em!
+    </p1>
+
+    <h2 style="color:maroon; font-family:'Times New Roman', Times, serif">
+        Texas A&M Solar Car Racing - Suspension Engineer
+    </h2>
+    
+        <div class="project-layout">
+                <img class="project-image" src="pictures/track_width.png" alt="track_width" width="300" height="300">
+
+                <div class="accordion-group">
+                        <button class="accordion"><b>Project Description</b></button>
+                        <div class="panel">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;I am on the Suspesion Subteam for Solar Car for the '26 - '27 year. 
+                                I am currently working on hand calculations and setting up modeling for the car. We are currently 
+                                looking at the necessary track width and will be using Siemens NX to model parts. The goal is to
+                                 have our systems manufactured and assembled by the end of next semester (Spring 2027)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;In addition to this, I am on the Solar Car "Battery Box" Capstone team, 
+                                where my team and I are looking at how to make the most efficient case for our battery cells and 
+                                considering reactive battery cooling mechanisms!
+                            </p>
+                        </div>
+                </div>
+        </div>
+
+    <h2 style="color:maroon; font-family:'Times New Roman', Times, serif">
+        "Rock, Paper, Scissors" Robotic Hand
+    </h2>
+    
+        <div class="project-layout">
+                <img class="project-image" src="pictures/robotic_hand.png" alt="Robotic Hand" width="300" height="300">
+
+                <div class="accordion-group">
+                        <button class="accordion"><b>Project Description</b></button>
+                        <div class="panel">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;My team and I were tasked with building a "toy for the elderly" for my geometric modeling course project. 
+                                We agreed on making a hand that could play "rock, paper, scissors" with the elderly. I offered to integrate 
+                                some electronics as opposed to making it entirely mechanical, so I took the lead in such effort. I incorporated
+                                 servo motors, a DC step-down converter, buttons, and an Arduino. Everything was modeled in SolidWorks. The finger joints were made with TPU to allow them to 
+                                "spring" back to their original shape. The apparatus worked by someone turning a revolving handle that would trigger the hand 
+                            to make one of three gestures. Ultimately, we won the award for best prototype and it was a great experience in developing and finishing something electromechanical.</p>
+                        </div>
+                </div>
+        </div>
+
+    <h2 style="color:maroon; font-family: 'Times New Roman', Times, serif">
+        Cottonseed Gas Project
+    </h2>
+
+    <div class="project-layout">
+                <img class="project-image" src="pictures/terrain_mapping.jpg" alt="terrain mapping" width="300" height="300">
+
+                <div class="accordion-group">
+                        <button class="accordion"><b>Project Description</b></button>
+                        <div class="panel">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;I led a research project with the USDA making a rover that could go over piles of cottonseed and detect/map CO2 concentrations at specific areas. 
+                                Pictured on the left is the terrain I had the Raspberry Pi generate (OpenGL) from accelerometer data sent to it from an ESP32 onboard the rover. At first, I ran multiple experiments with varying
+                                 volumes of cottonseed, fan speeds, and small bursts of CO2 to determine optimal sensor positioning. Pictured below is one of the setups I used for such experiments.
+                                 <img class="experiment-image" src="pictures/experiment_setup.png" alt="experiment setup" width="200" height="250">
+                            </p>
+                        </div>
+                </div>
+        </div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+    }
+</script>
+</body>

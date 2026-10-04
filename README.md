@@ -1,2 +1,2 @@
 # alan-meche.com
-My Projects
+My personal website where I show off some of the cool projects I've worked on!

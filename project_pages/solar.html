@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<header>   
+    <style>
+    .accordion {
+    background-color: maroon;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    width: 100%; 
+    }
+
+    .active, .accordion:hover {
+    background-color: #ccc;
+    }
+    
+    .accordion:after {
+    content: '+';
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+    align-items: center;
+    }
+
+    .active:after {
+    content: "-";
+    }
+
+    .panel {
+    padding: 0 18px;
+    background-color: white;
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .project-layout {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .project-image {
+        flex: 0 1 500px;
+    }
+
+    .experiment-image {
+        margin: 16px auto 0;
+    }
+
+    .accordion-group {
+        flex: 1;
+    }
+
+    @media (max-width: 800px) {
+        .project-layout {
+            flex-direction: column;
+        }
+    }
+
+    .p1 {
+        border-style: none;
+        padding-left: 2%; 
+        padding-top: 2%; 
+        padding-bottom: 2%; 
+        outline: 2px solid #CCC;
+        border: 1 solid #999;
+        flex-wrap: wrap;
+        align-items: center;
+
+    }
+
+    .default {
+        color:maroon;
+    }
+    </style>
+</header>
+
+
+
+<body style="font-family: Georgia, 'Times New Roman', Times, serif; background-color: #FFFDD0;">
+    <h2>
+        Texas A&M Solar Car Racing - Suspension Engineer
+    </h2>
+    <img src="../project_images/car_layout.png" alt="car_layout" style="width: 50%; margin: auto">
+    <p style="width:50%; margin: 2% auto;">
+        &nbsp;&nbsp;&nbsp;&nbsp;I am on the Suspension Subteam for the '26 - '27 year. 
+            Over the summer, we determined the appropriate track width of the car, allowing us to set our 
+            suspension points using an in-house calculator to accomodate forces on a double-wishbone
+            suspension system.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;I am currently setting bonding geometry for carbon-fiber
+            tubing epoxied with aluminum inserts for the A-Arms in our suspension system. Using carbon-fiber 
+            tubing would allow use to heavily decrease the weight due to the suspension system, since last year a
+            solid steel material was used.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;I am setting calculations for the axial displacement and maximum shear stresses of 
+            parts in the bonding section (aluminum insert, epoxy, and carbon-fiber tubing)
+            at expected maximum forces to determine the optimal
+            geometry for these components and their distance. I am also determining tensile, compression, and
+            testing parameters (strain rate) for tests on our Instron machines to find bonding properties for the specific
+            materials we order.
+    </p>
+    <img src="../project_images/normal_force_and_stress_plots.png" alt="forces_and_stresses_plots" style="width: 50%; margin: auto">
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+        }
+    </script>
+</body>

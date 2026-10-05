@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<header>   
+    <style>
+        h2 {
+            display: inline;
+        }
+        p {
+            width: 50%;
+            margin: 2% auto;
+        }
+            
+        img {
+            display: block;
+            margin: 2% auto;
+            width: 50%; 
+            background-color: #FFFDD0; 
+        }
+
+        button {
+            background-color: #FFFDD0; 
+            border: none;
+            vertical-align: -25%;
+            margin: auto 1%;
+        }
+
+        button:hover {
+        transform: scale(1.25, 1.25);
+        -moz-transform: scale(1.25, 1.25);
+        -webkit-transform: scale(1.25, 1.25);
+        -o-transform: scale(1.25, 1.25);
+    }
+    </style>
+</header>
+
+
+<body style="font-family: Georgia, 'Times New Roman', Times, serif; background-color: #FFFDD0;">
+    <button onclick="history.back()"><img src="../project_images/back_icon.png"></img></button>
+    <h2>
+        Dispersion Analysis Modeling Research
+    </h2>
+    <img src="../project_images/sketch_to_part.png">
+    <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;I am currently working with Dr. Pal with dispersion analysis research where
+            we are wanting to analyze wave propagation in lattices with COMSOL Multiphysics modeling. The first roadblock
+            I had to address was creating a program that could analyze lattices sketched out and make extruded parts
+            on SolidWorks (see above).<br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;So far, this program accounts for lines, arcs, and circle commands using SolidWorks
+            API calls. The next steps will be importing these models onto COMSOL Multypyshics to study how the behave
+            in simulations. We are already running experiments looking at the stiffnesses for different lattices with
+            dynamic excitations set with a prescribed displacement and frequency at a central point. 
+    </p>
+    <p style=" text-align: center"><a href="https://github.com/alanalvarado27/Dispersion-Analysis-Research.git" style="color:#500000;">Work in progress on GitHub!</a></p>    
+    
+    <script>
+    </script>
+</body>

@@ -5,13 +5,18 @@
 <header>   
     <style>
 
-    .p1 {
-        border-style: none;
-        padding-left: 2%; 
-        padding-bottom: 1%; 
-        flex-wrap: wrap;
+    .container {
+        display: flex;
         align-items: center;
+        gap: 2%;
+        width: 100%;
+    }
 
+    .p1 {
+        flex: 1;
+        min-width: 0;
+        padding-left: 2%;
+        padding-bottom: 1%;
     }
 
     .default {
@@ -63,6 +68,13 @@
         margin-bottom: 3%;
     }
 
+    .container img {
+        width: 20%;
+        height: auto;
+        flex-shrink: 0;
+        border-radius: 25%;
+        margin-right: 2%;
+    }
     </style>
 </header>
 
@@ -71,7 +83,7 @@
 <body style="font-family: Georgia, 'Times New Roman', Times, serif; background-color: #FFFDD0;">
     
     <h2 class = "heading">Howdy!</h2>
-
+    <div class = "container">
     <p class="p1">
     &nbsp;&nbsp;&nbsp;&nbsp;My name is Alan and I am an honors mechanical engineering student at Texas A&M with a minor in computer science.
      I'm back on campus and currently working on <a class= "default" href="https://www.tamusolar.org/">Solar Car</a> suspension + 
@@ -84,16 +96,18 @@
     <br>
     Feel free to <a class = "default" href="mailto:alanalvarado@tamu.edu">reach out</a> if you have any questions or suggestions!<br>
     </p>
-
+    <img src="project_images/professional_headshot_lol.jpg">
+    </div>
 
     
     <h2 class = "heading">
         Projects
     </h2>
     <div class = "project_section">
-        <div class="project_icon" onclick="location.href='project_pages/dispersion_analysis_page.html'">
-            <img src="project_images/Parallelogram - Raw.png" alt = "Mechanics of Metastructures Lab Project">
-            <p style="color: white">Dispersion Analysis</p>
+        
+        <div class="project_icon" onclick="location.href='project_pages/battery_box_page.html'">
+            <img src="project_images/molicel_battery.png" alt="Battery">
+            <p style="color: white">Solar Car Battery Box</p>
         </div>
         <div class="project_icon" onclick="location.href='project_pages/suspension_project_page.html'">
             <img src="project_images/solar.png" alt="Solar Car Project">
@@ -107,7 +121,10 @@
             <img src="project_images/DRON.png" alt="Cottonseed Storage Project">
             <p style="color: white">DRON Project</p>
         </div>
-        
+        <div class="project_icon" onclick="location.href='project_pages/dispersion_analysis_page.html'">
+            <img src="project_images/Parallelogram - Raw.png" alt = "Mechanics of Metastructures Lab Project">
+            <p style="color: white">Dispersion Analysis</p>
+        </div>
     </div>
 
     <script>
